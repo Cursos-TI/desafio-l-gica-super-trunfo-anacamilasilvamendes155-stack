@@ -29,13 +29,19 @@ int main() {
 
     // Cadastro das Cartas:
      // ===== Carta 1 =====
-    char estado1 
+    char estado1;
     char codigo1[4];
     char cidade1[50];
     int populacao1; 
     float area1;
     float pib1;
     int pontosTuristicos1;
+    double pib_per_capita1;
+    double densidade1;
+
+    densidade1 = populacao1 / area1;
+    pib_per_capita1 = (pib1 * 1e9) / populacao1;
+
 
     // ===== Carta 2 =====
     char estado2;
@@ -45,6 +51,12 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    double pib_per_capita2;
+    double densidade2;
+
+    densidade2= populacao2 / area2;
+    pib_per_capita2 = (pib2 * 1e9) / populacao2;
+
 
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
     // utilizando a função scanf para capturar as entradas.
@@ -124,9 +136,10 @@ int main() {
      } else{}
          printf("Carta 2 tem o maior PIB.\n");
      }
- 
-     
 
+     
+ 
+    
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
